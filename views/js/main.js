@@ -16,7 +16,7 @@ Cameron Pittman, Udacity Course Developer
 cameron *at* udacity *dot* com
 
 Updates:
-ss01:  Scott Stubbs 10/10/2015 - replaced the pizza resize fucntion to removed the Forced Sync Layout issue
+ss01:  Scott Stubbs 10/10/2015 - replaced the pizza resize fucntion to remove the Forced Sync Layout issue
 */
 
 // As you may have realized, this website randomly generates pizzas.
