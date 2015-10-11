@@ -14,10 +14,10 @@ http://www.html5rocks.com/en/tutorials/webperformance/usertiming/
 Creator:
 Cameron Pittman, Udacity Course Developer
 cameron *at* udacity *dot* com
+
+Updates:
+ss01:  Scott Stubbs 10/10/2015 - replaced the pizza resize fucntion to removed the Forced Sync Layout issue
 */
-
-/* ss01 10/10/2015 - per the Browser Renering Optimization lessone I changed this to remove the FSL Forced Sync Layout */
-
 
 // As you may have realized, this website randomly generates pizzas.
 // Here are arrays of all possible pizza ingredients.
@@ -424,6 +424,7 @@ var resizePizzas = function(size) {
 
   changeSliderLabel(size);
 
+  /* ============  ss01 no longer called 
   // Returns the size difference to change a pizza element from one size to another. Called by changePizzaSlices(size).
   function determineDx (elem, size) {
     var oldwidth = elem.offsetWidth;
@@ -449,6 +450,8 @@ var resizePizzas = function(size) {
 
     return dx;
   }
+==================  ss01 */
+
 
   // Iterates through pizza elements on the page and changes their widths
   function changePizzaSizes(size) {
@@ -478,7 +481,7 @@ var resizePizzas = function(size) {
     //ss01 changed  the above code to eliminate the FSL
     var randomPizzas = document.querySelectorAll(".randomPizzaContainer"); //ss01 store the pizza sizeSwitcher
     for (var i = 0; i < randomPizzas.length; i++) {
-      //randomPizzas[i].style.width = sizeSwitcher(size) * 100 + "%"; 
+      //ss01 no longer need to call the sizeSwitcher function, I just use the newWidth above
       randomPizzas[i].style.width = newWidth + "%"; 
     }
   }
